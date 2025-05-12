@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  ganache:
+    image: trufflesuite/ganache-cli
+    ports:
+      - "8545:8545"
+    command: ganache-cli -h 0.0.0.0 -p 8545 -m "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
+
+  ipfs:
+    image: ipfs/go-ipfs
+    ports:
+      - "5001:5001"
+      - "8080:8080"
+    volumes:
+      - ipfs_data:/data/ipfs
+
+volumes:
+  ipfs_data:

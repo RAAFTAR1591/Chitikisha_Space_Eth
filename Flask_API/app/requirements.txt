@@ -1,0 +1,4 @@
+Flask
+web3
+py-solc-x
+requests

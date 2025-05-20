@@ -17,8 +17,8 @@ jobs:
         uses: azure/docker-login@v1
         with:
           login-server: chitikishaacr.azurecr.io
-          username: ${{ secrets.chitikishaacr }}
-          password: ${{ secrets.v3UhkaoJ1lb8kyD5JSwnrTcJFbR7Xa5fmOSgG7/uFz+ACRDVpLN8 }}
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
 
       - name: Build and tag Docker image
         run: |
